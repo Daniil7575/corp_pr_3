@@ -1,0 +1,60 @@
+﻿@{
+	ViewData["Title"] = "Register";
+}
+
+<div class="text-center">
+	<h1 class="">Register</h1>
+	<form method="post" asp-action="Register" asp-controller="Register">
+		<div class="form-group">
+			<label class="control-label">Login:</label>
+			<input asp-for="Login" class="form-control" name="Login" />
+			<label  class="control-label">FullName:</label>
+			<input asp-for="FullName" class="form-control" name="FullName" />
+			<label  class="control-label">Password:</label>
+			<input asp-for="Password" class="form-control" type="password" name="Password" />
+			@ViewData["Message"]
+			<button type="submit">Register</button>
+		</div>
+	</form>
+</div>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+</style>
